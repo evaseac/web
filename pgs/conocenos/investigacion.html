@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Evaseac - Investigación</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/custom.css">
+    <!-- Icon -->
+    <link rel="icon" href="../../imgs/Evaseac.ico">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <div class="jumbotron"
+      style="margin-bottom: 0px;
+      height: 175px;
+      background-image: url('../../imgs/header.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      ">
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
+
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar_menu">
+        <p><span class="navbar-toggler-icon"></span>Menú</p>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbar_menu">
+        <ul class="navbar-nav" style="margin-bottom: -20px; margin-top: -10px">
+          <li class="nav-item" style="padding-right: 35px; padding-left: 35px;">
+            <a class="nav-link" href="../../index.html"><p class="lead">Inicio</p></a>
+          </li>
+          <li class="nav-item dropdown" style="padding-right: 35px; padding-left: 35px;">
+            <a class="nav-link dropdown-toggle active" data-toggle="dropdown" data-target="#nav_conocenos" href="#">
+              <font class="lead">Conócenos</font>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="nav_conocenos">
+              <a class="dropdown-item" href="grupo_trabajo.php">Grupo de trabajo</a>
+              <a class="dropdown-item" href="investigacion.html">Investigación</a>
+            </div>
+          </li>
+          <li class="nav-item" style="padding-right: 35px; padding-left: 35px;">
+            <a class="nav-link" href="#" onclick="btnConsultar_Click();"><p class="lead">Consultar</p></a>
+          </li>
+          <li class="nav-item" style="padding-right: 35px; padding-left: 35px;">
+            <a class="nav-link" href="../sitios/ingresar.html" onclick=""><p class="lead">Insertar</p></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <br><br>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Lineas de investigación</h1>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+          <div class="jumbotron">
+            <ul>
+              <li><h5>Índices FQ de calidad del agua</h5></li>
+              <li><h5>Análisis quemométrico</h5></li>
+              <li><h5>Lógica difusa</h5></li>
+              <li><h5>Evaluación de riesgo ecológico</h5></li>
+              <li><h5>A nivel molecular (expresión genética y daño al ADN)</h5></li>
+              <li><h5>A nivel bioquímico (estrés oxidativo, defensa antioxidante y actividad mitocondrial)</h5></li>
+              <li><h5>A nivel fisiológico (respuesta de crecimiento, inhibición)</h5></li>
+              <li><h5>A nivel histopatológico (t. histológicas)</h5></li>
+              <li><h5>A nivel morfológico (asimetría fluctuante, i. corporales)</h5></li>
+              <li><h5>Estimadores de diversidad taxonómica</h5></li>
+              <li><h5>Estimadores de diversidad funcional</h5></li>
+              <li><h5>Elaboración y calibración de índices de bioindicación</h5></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5">
+          <br><br>
+          <center><img src="../../imgs/research.png" alt=""></center>
+        </div>
+      </div>
+      <div class="jumbotron">
+        <h1>Proyectos vigentes</h1>
+      </div>
+      <div class="container">
+        <p><b>SIP <u>20164815</u></b> Los macroinvertebrados acuáticos de los drenes agrícolas como indicadores del estado de salud del Sistema Lagunar Navachiste, Sinaloa.</p>
+        <p><b>SIP <u>20164819</u></b> Diversidad Funcional de los macroinvertebrados acuáticos de los ríos Salado y Grande (Reserva de la Biósfera Tehuacán-Cuicatlán).</p>
+        <p><b>CONACyT Problemas Nacionales:</b> Valoración de la condición de salud de cuerpos de agua en Áreas Naturales Protegidas.</p>
+        <p>Instrumentación y Operación de Planes y Programas Ambientales para el Nuevo Aeropuerto Internacional de la Ciudad de México (NAICM), etapa 2016-2018.</p>
+      </div>
+    </div>
+
+    <br><br>
+
+    <!-- Hidden required form to update mysql table -->
+    <form class="" action="../setdate.php" method="post" hidden>
+      <input type="text" name="page" value="sitios/sitios.php">
+      <input type="text" name="date" id="txtDate1" value="">
+      <input type="text" name="sitio" value="">
+      <input type="text" name="responsable" value="">
+      <input type="submit" value="Sitios" id="btnSubmit1">
+    </form>
+    <form class="" action="../consultar/setinfo.php" method="post" hidden>
+      <input type="text" name="date" id="txtDate2" value="">
+      <input type="submit" value="Sitios" id="btnSubmit2">
+    </form>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script>
+  window.onload = function(){
+    var date = new Date();
+    document.getElementById('txtDate1').value = document.getElementById('txtDate2').value = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2);
+  }
+
+  function btnInsertar_Click(){
+    document.getElementById('btnSubmit1').click();
+  }
+  function btnConsultar_Click(){
+    document.getElementById('btnSubmit2').click();
+  }
+
+
+</script>

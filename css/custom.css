@@ -1,0 +1,49 @@
+.center {
+  margin: auto;
+  width: 60%;
+  padding: 10px;
+}
+
+.my-custom-scrollbar {
+  position: relative;
+  min-height: 60px;
+  max-height: 120px;
+  overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+display: block;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+
+thead th {
+  position: sticky;
+  top: 0;
+}
+
+.carousel-item {
+  height: 85vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  }
+
+.carousel-caption{
+  top: 15%;
+  transform: translateY(-15%);
+  bottom: initial;
+}
+
+.item {
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}

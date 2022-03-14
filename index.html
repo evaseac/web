@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <title>Evaseac</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Icon -->
+    <link rel="icon" href="imgs/Evaseac.ico">
+  </head>
+  <body>
+
+    <!-- Header -->
+    <div class="jumbotron"
+      style="margin-bottom: 0px;
+      height: 175px;
+      background-image: url('imgs/header.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      ">
+    </div>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
+
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbar_menu">
+        <p><span class="navbar-toggler-icon"></span>Menasdasdú</p>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-md-center" id="navbar_menu">
+        <ul class="navbar-nav" style="margin-bottom: -20px; margin-top: -10px">
+          <li class="nav-item" style="padding-right: 35px; padding-left: 35px;">
+            <a class="nav-link active" href="#"><p class="lead">Inicio</p></a>
+          </li>
+          <li class="nav-item dropdown" style="padding-right: 35px; padding-left: 35px;">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" data-target="#nav_conocenos" href="#">
+              <font class="lead">Conócenos</font>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="nav_conocenos">
+              <a class="dropdown-item" href="pgs/conocenos/grupo_trabajo.php">Grupo de trabajo</a>
+              <a class="dropdown-item" href="pgs/conocenos/investigacion.html">Investigación</a>
+            </div>
+          </li>
+          <li class="nav-item" style="padding-right: 35px; padding-left: 35px;">
+            <a class="nav-link" href="#" onclick="btnConsultar_Click();"><p class="lead">Consultar</p></a>
+          </li>
+          <li class="nav-item" style="padding-right: 35px; padding-left: 35px;">
+            <a class="nav-link" href="pgs/sitios/ingresar.html" onclick="btnInsertar_Click();"><p class="lead">Insertar</p></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Page content -->
+    <header>
+      <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carousel" data-slide-to="0" class="active"></li>
+          <li data-target="#carousel" data-slide-to="1"></li>
+          <!-- <li data-target="#carousel" data-slide-to="2"></li> -->
+        </ol>
+        <div class="carousel-inner" role="listbox">
+          <!-- Slide One -->
+          <div class="carousel-item active" style="background-image: url('imgs/slide1.png')">
+            <div class="carousel-caption">
+              <h1 class="display-3">Misión</h1>
+              <br>
+              <h3>
+                <small>Somos un laboratorio de investigación y docencia enfocado al diagnóstico integral del estado de salud de los ecosistemas acuáticos</small>
+              </h3>
+            </div>
+          </div>
+          <!-- Slide Two -->
+          <div class="carousel-item" style="background-image: url('imgs/slide2.png')">
+            <div class="container">
+              <div class="carousel-caption">
+                <h2 class="display-3">Visión</h2>
+                <br>
+                <h3>
+                  <small>Consolidarse como un laboratorio de vanguardia y de referencia a nivel nacional e internacional en la evaluación de la salud de los ecosistemas acuáticos</small>
+                </h3>
+              </div>
+            </div>
+          </div>
+          <!-- Slide Three - Set the background image for this slide in the line below -->
+          <!-- <div class="carousel-item" style="background-image: url('imgs/tst1.png')">
+            <div class="carousel-caption">
+              <h2 class="display-4">Saporem</h2>
+              <p class="lead">
+                Uno rectum uti sui possum falsae secius vixque. Placidae cognitum pluribus eo rogassem id. <br>
+                Item ita cui quod haec adeo ibi fato. Sae ordinem quietem majoris examino imo. Ob eo quum et nunc solo meos adeo alia ac.
+              </p>
+            </div>
+          </div> -->
+        </div>
+        <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+        <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+      </div>
+    </header>
+
+    <!-- Hidden required form to update mysql table -->
+    <form class="" action="pgs/setdate.php" method="post" hidden>
+      <input type="text" name="page" value="sitios/sitios.php">
+      <input type="text" name="date" id="txtDate1" value="">
+      <input type="text" name="sitio" value="">
+      <input type="text" name="responsable" value="">
+      <input type="submit" value="Sitios" id="btnSubmit1">
+    </form>
+    <form class="" action="pgs/consultar/setinfo.php" method="post" hidden>
+      <input type="text" name="date" id="txtDate2" value="">
+      <input type="submit" value="Sitios" id="btnSubmit2">
+    </form>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script>
+  window.onload = function(){
+    var date = new Date();
+    document.getElementById('txtDate1').value = document.getElementById('txtDate2').value = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2);
+  }
+
+  function btnInsertar_Click(){
+    document.getElementById('btnSubmit1').click();
+  }
+  function btnConsultar_Click(){
+    document.getElementById('btnSubmit2').click();
+  }
+
+
+</script>

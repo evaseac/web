@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Evaseac - Ingresar</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../../css/custom.css">
+    <!-- Icon -->
+    <link rel="icon" href="../../imgs/Evaseac.ico">
+  </head>
+  <body>
+
+    <div class="container" style="margin-top: 5%;">
+      <center><a href="../../index.html"><img src="../../imgs/header.png"></a></center>
+
+      <form class="" action="autenticar.php" method="post">
+        <div class="form-group row">
+          <label for="txtUser" class="col-lg-3 col-md-3 col-sm-12 col-form-label"><h5>Usuario:</h5></label>
+          <div class="col-lg-9 col-md-9 col-sm-12">
+            <input type="text" class="form-control" name="usuario" id="txtUser" placeholder="Ingrese el usuario" required>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="txtPassword" class="col-lg-3 col-md-3 col-sm-12 col-form-label"><h5>Contraseña:</h5></label>
+          <div class="col-lg-9 col-md-9 col-sm-12">
+            <input type="password" class="form-control" name="password" id="txtPassword" placeholder="Ingrese la contraseña" required>
+          </div>
+        </div>
+        <div class="form-group-row">
+          <center>
+            <input type="submit" value="Ingresar" id="btnSubmit1">
+          </center>
+        </div>
+
+        <input type="text" name="page" value="sitios/sitios.php" hidden>
+        <input type="text" name="date" id="txtDate1" value="" hidden>
+        <input type="text" name="responsable" value="" hidden>
+        <input type="text" name="sitio" value="" hidden>
+      </form>
+    </div>
+
+    <form class="" action="../setdate.php" method="post" hidden>
+      <input type="text" name="page" value="sitios/sitios.php">
+      <!-- <input type="text" name="date" id="txtDate1" value=""> -->
+      <input type="text" name="sitio" value="">
+      <input type="text" name="responsable" value="">
+      <input type="submit" value="Sitios" id="btnSubmit1">
+    </form>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
+<script>
+  window.onload = function(){
+    var date = new Date();
+    document.getElementById('txtDate1').value = date.getFullYear() + "-" + ("0" + (date.getMonth() + 1)).slice(-2);
+  }
+</script>
